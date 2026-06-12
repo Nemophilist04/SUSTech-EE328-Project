@@ -1,0 +1,29 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Large or regenerable data
+data/raw/
+data/raw_readable/
+data/processed/
+
+# Local pretrained checkpoints copied by the user
+models/ecapa_pretrained/
+
+# Runtime logs and temporary outputs
+*.log
+outputs/
+_docx_render_check/
+submission_package/
+*.zip
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

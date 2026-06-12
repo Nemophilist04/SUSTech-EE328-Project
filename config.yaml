@@ -1,0 +1,48 @@
+data:
+  root_dir: "data/raw_readable"
+  processed_dir: "data/processed"
+  split_dir: "data/splits"
+  librispeech_url: "dev-clean"
+  num_registered_speakers: 10
+  num_unknown_speakers: 5
+  utterances_per_speaker: 40
+  train_per_speaker: 28
+  val_per_speaker: 6
+  test_per_speaker: 6
+  random_seed: 42
+
+audio:
+  sample_rate: 16000
+  mono: true
+  trim_silence: true
+
+features:
+  n_mfcc: 13
+  use_delta: true
+  use_delta_delta: true
+  frame_length_ms: 25
+  hop_length_ms: 10
+  normalize: true
+
+baseline:
+  metric: "cosine"
+
+gmm:
+  n_components_list: [4, 8, 16]
+  covariance_type: "diag"
+  max_iter: 200
+  random_state: 42
+
+ecapa:
+  enabled: true
+  source: "speechbrain/spkrec-ecapa-voxceleb"
+  pretrained_dir: "models/ecapa_pretrained"
+  cache_dir: "data/processed/ecapa_cache"
+
+evaluation:
+  primary_metric: "accuracy"
+  save_confusion_matrix: true
+  open_set_enabled: true
+
+demo:
+  default_model: "gmm_8"

@@ -1,0 +1,15 @@
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+PyYAML
+joblib
+streamlit
+soundfile
+
+# Optional ECAPA extractor:
+# speechbrain
+
+# torch and torchaudio are intentionally not pinned here because this project
+# targets an existing CUDA-enabled Windows environment.
