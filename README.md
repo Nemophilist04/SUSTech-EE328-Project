@@ -8,7 +8,7 @@ This project is set up for Windows PowerShell with the existing Conda environmen
 
 ```powershell
 conda activate speaker-id
-cd C:\Users\ben04\Desktop\speaker_id_project
+cd path\to\speaker_id_project
 ```
 
 Do not recreate the environment. PyTorch and torchaudio are already installed for the local CUDA/Windows setup, so they are intentionally not pinned in `requirements.txt`.

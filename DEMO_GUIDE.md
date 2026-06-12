@@ -6,7 +6,7 @@ Open Windows PowerShell:
 
 ```powershell
 conda activate speaker-id
-cd C:\Users\ben04\Desktop\speaker_id_project
+cd path\to\speaker_id_project
 streamlit run app.py
 ```
 
